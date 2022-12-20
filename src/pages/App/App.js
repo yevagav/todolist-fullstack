@@ -59,12 +59,35 @@ function App() {
   }
 
 
+// const completeTodo = async (id, updatedData) => {
+//   const copyTodos = [...todos]
+//   const indexofTodo = copyTodos.findIndex((i) => i.id ===id)
+//   copyTodos[indexofTodo].completed = !copyTodos[indexofTodo].completed
+//   setTodos(copyTodos)
+//   try {
+//     const response = await fetch(`/api/todos/${id}`, {
+//       method: "PUT",
+//       headers: {
+//         'Content-Type': 'application/json'
+//       },
+//       body: JSON.stringify({...updatedData})
+//     })
+//     const data = await response.json()
+//     setFoundTodo(data)
+//   } catch (error) {
+//     console.error(error)
+//   }
+// }
+
+
 const completeTodo = (id, e) => {
   const copyTodos = [...todos]
   const indexofTodo = copyTodos.findIndex((i) => i.id ===id)
   copyTodos[indexofTodo].completed = !copyTodos[indexofTodo].completed
   setTodos(copyTodos)
 }
+
+
 
   const handleChange = (evt) => {
     setNewTodo({...newTodo, [evt.target.name] : evt.target.value})

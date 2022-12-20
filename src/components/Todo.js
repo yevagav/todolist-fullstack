@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 export default function Todo({ todo, completeTodo, deleteTodo, setNewTodo, newTodo, handleChange }) {
+    const [showDelete, setShowDelete] = useState(false)
     return (
         <>
             <li>
@@ -12,10 +13,13 @@ export default function Todo({ todo, completeTodo, deleteTodo, setNewTodo, newTo
                         checked={todo.completed}
                         onChange={(e) => {
                             completeTodo(todo.id, e)
+                            setShowDelete(true)
                         }}
                     />
                 </label>
-                <br /><button onClick={() => deleteTodo(todo._id)}>Delete Todo</button>
+                <br /><button 
+                style={{ display: showDelete ? "block" : "none" }}
+                onClick={() => deleteTodo(todo._id)}>Delete Todo</button>
             </li>
         </>
     )
