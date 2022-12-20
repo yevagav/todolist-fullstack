@@ -1,0 +1,42 @@
+* {
+   box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background-color: rgb(240, 240, 255);
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.App {
+    background-color: white;
+    border-radius: 9px;
+    border: 1px solid #e7ecfb;
+    box-shadow: 0 0 30px rgba(211, 220, 248, 0.3);
+    padding: 30px;
+}
+
+input {
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    border: 0;
+    border-radius: 9px;
+    color: #666f99;
+    padding: 12px 60px 12px 18px;
+    background: #f3f5fc;
+  }
+
+  li {
+    font-size: 20px;
+    color: rgb(23, 5, 58);
+    margin: 1rem 0;
+  }
